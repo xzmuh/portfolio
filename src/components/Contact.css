@@ -1,0 +1,125 @@
+.contact-section {
+  padding: 6rem 1.5rem;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.contact-card {
+  border-radius: 3rem;
+  padding: 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-bg-1 {
+  position: absolute;
+  top: -5rem;
+  right: -5rem;
+  width: 20rem;
+  height: 20rem;
+  background-color: rgba(208, 188, 255, 0.2);
+  border-radius: 9999px;
+  filter: blur(100px);
+  z-index: -10;
+}
+
+.contact-bg-2 {
+  position: absolute;
+  bottom: -5rem;
+  left: -5rem;
+  width: 20rem;
+  height: 20rem;
+  background-color: rgba(213, 188, 243, 0.2);
+  border-radius: 9999px;
+  filter: blur(100px);
+  z-index: -10;
+}
+
+.contact-title {
+  font-size: 3rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.contact-desc {
+  font-size: 1.125rem;
+  margin-bottom: 3rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 28rem;
+  margin: 0 auto 3rem;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-icon {
+  font-size: 1.875rem;
+}
+
+.contact-link {
+  font-size: 1.25rem;
+  font-family: var(--font-display);
+  transition: color 0.2s;
+}
+
+.contact-link:hover {
+  color: var(--color-primary);
+}
+
+.contact-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-btn {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.social-btn:hover {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.contact-actions {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-send {
+  padding: 1rem 3rem;
+  border-radius: 9999px;
+  font-family: var(--font-label);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-send:hover {
+  filter: brightness(1.1);
+}
+
+.btn-send:active {
+  transform: scale(0.95);
+}

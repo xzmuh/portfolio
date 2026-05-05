@@ -1,0 +1,39 @@
+.footer {
+  padding: 3rem 2rem;
+  border-top: 1px solid rgba(73, 68, 84, 0.2);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+  }
+}
+
+.footer-brand {
+  font-size: 1.5rem;
+}
+
+.footer-copy {
+  font-size: 0.875rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-link {
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: var(--color-primary);
+}

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Murilo Gonzales Trigo • Full Stack Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#131313",
+                        "primary": "#d0bcff",
+                        "tertiary": "#d5bcf3",
+                        "tertiary-container": "#9e87ba",
+                        "tertiary-fixed-dim": "#d5bcf3",
+                        "on-tertiary": "#3a2753",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-dim": "#131313",
+                        "on-primary-fixed": "#23005c",
+                        "secondary-container": "#573878",
+                        "on-tertiary-container": "#33204c",
+                        "surface-container": "#201f1f",
+                        "on-secondary-fixed": "#29074a",
+                        "on-background": "#e5e2e1",
+                        "primary-fixed": "#e9ddff",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "surface-bright": "#3a3939",
+                        "surface-container-low": "#1c1b1b",
+                        "on-secondary-fixed-variant": "#573878",
+                        "background": "#0e0e0e",
+                        "on-tertiary-fixed-variant": "#513e6b",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-primary": "#6d3bd7",
+                        "error": "#ffb4ab",
+                        "secondary-fixed-dim": "#dbb8ff",
+                        "surface-container-highest": "#353534",
+                        "outline": "#958ea0",
+                        "inverse-on-surface": "#313030",
+                        "outline-variant": "#494454",
+                        "on-secondary-container": "#caa6ef",
+                        "inverse-surface": "#e5e2e1",
+                        "tertiary-fixed": "#eddcff",
+                        "secondary": "#dbb8ff",
+                        "on-surface": "#e5e2e1",
+                        "primary-fixed-dim": "#d0bcff",
+                        "secondary-fixed": "#efdbff",
+                        "surface-tint": "#d0bcff",
+                        "on-tertiary-fixed": "#24113d",
+                        "on-secondary": "#3f2160",
+                        "surface-variant": "#353534",
+                        "primary-container": "#a078ff",
+                        "on-primary-container": "#340080",
+                        "on-primary": "#3c0091",
+                        "on-error-container": "#ffdad6",
+                        "on-surface-variant": "#cbc3d7",
+                        "on-primary-fixed-variant": "#5516be"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "headline": ["Space Grotesk", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Space Grotesk", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #0e0e0e;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .glass-card {
+            background: rgba(32, 31, 31, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .bg-glow {
+            background: radial-gradient(circle at center, rgba(160, 120, 255, 0.15) 0%, transparent 70%);
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(208, 188, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-background selection:bg-primary selection:text-on-primary">
+<!-- Navbar -->
+<nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl glass-card rounded-full px-8 py-3 flex items-center justify-between">
+<div class="font-display font-bold text-lg text-primary tracking-tight">MGT.</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-sm font-label uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
+<a class="text-sm font-label uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#experience">Journey</a>
+<a class="text-sm font-label uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#stack">Stack</a>
+<a class="text-sm font-label uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#projects">Projects</a>
+</div>
+<a class="bg-primary text-on-primary px-5 py-2 rounded-full font-label text-sm font-bold hover:brightness-110 transition-all" href="#contact">Contact</a>
+</nav>
+<main class="relative">
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col items-center justify-center pt-20 px-4 overflow-hidden" id="hero">
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] -z-10 animate-pulse"></div>
+<div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-tertiary/10 rounded-full blur-[150px] -z-10"></div>
+<div class="text-center space-y-6 max-w-4xl">
+<div class="inline-block px-4 py-1.5 rounded-full glass-card border-primary/20 text-primary font-label text-xs uppercase tracking-widest mb-4">
+                    Full Stack Architect
+                </div>
+<h1 class="text-5xl md:text-8xl font-display font-bold leading-[1.1] tracking-tight text-on-surface">
+                    Full Stack Developer &amp; <br/>
+<span class="text-primary text-glow">ERP Specialist</span>
+</h1>
+<p class="max-w-2xl mx-auto text-on-surface-variant text-lg md:text-xl font-body leading-relaxed">
+                    Bridging the gap between robust fiscal architecture and seamless user experiences. Specializing in high-performance ERP systems and complex financial logic.
+                </p>
+<div class="flex flex-wrap justify-center gap-4 mt-8">
+<div class="glass-card px-6 py-4 rounded-2xl flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">terminal</span>
+<div class="text-left">
+<p class="text-[10px] font-label uppercase text-on-surface-variant">Experience</p>
+<p class="font-display font-semibold">5+ Years at I-SINC</p>
+</div>
+</div>
+<div class="glass-card px-6 py-4 rounded-2xl flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary">account_balance</span>
+<div class="text-left">
+<p class="text-[10px] font-label uppercase text-on-surface-variant">Specialty</p>
+<p class="font-display font-semibold">Fiscal Logic Expert</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section (Updated from IMAGE_10) -->
+<section class="py-24 px-6 max-w-6xl mx-auto" id="about">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="absolute -top-10 -left-10 w-64 h-64 bg-primary/20 rounded-full blur-[60px] -z-10"></div>
+<div class="relative aspect-square max-w-md mx-auto overflow-hidden rounded-[3rem] glass-card p-2">
+<!-- Simulated wavy purple background container -->
+<div class="w-full h-full bg-gradient-to-br from-primary/30 to-secondary/30 relative flex items-center justify-center overflow-hidden rounded-[2.5rem]">
+<div class="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_50%_50%,#8b5cf6,transparent_70%)] animate-pulse"></div>
+<img alt="Murilo Gonzales Trigo" class="w-full h-full object-cover z-10" src="https://lh3.googleusercontent.com/aida/ADBb0ugbRwHmvySBgZSMr1K7Fw_-oFHXmkpelo7pNhWMXPw2lAq_6I2d0r-v4XAF1sGRHZk81GwDf5ShMu5fC5xdA-Hf1EnrV3r0z05EPHsO5UTr-XaA2ykYHByjyEWY38-r1DNCbfp68I2HLy2Sbao2DvbucLU4Mc3dIFUnOX2GcWPgJSxjXxMIp5_VsmZa0-3bZuvsiXdUfh1Z7FnKVkiQan9jLmTHUzAe4mTVvQZktd7KuBY35U3_RpWCQJwPwl1_qTiH5vktq4vxVno"/>
+</div>
+</div>
+</div>
+<div class="space-y-8">
+<h2 class="text-4xl font-display font-bold text-on-surface flex items-center gap-4">
+                        About Me
+                        <span class="h-1 w-12 bg-primary rounded-full"></span>
+</h2>
+<div class="space-y-6 text-on-surface-variant text-lg leading-relaxed">
+<p>
+                            I'm Murilo, a passionate Full Stack Developer with a deep expertise in ERP systems and fiscal logic. My journey has been defined by solving complex business problems with elegant code.
+                        </p>
+<p>
+                            With over 5 years at I-SINC, I've led the development of critical financial modules, tax calculation engines, and real-time reporting systems that handle massive data throughput for enterprise clients.
+                        </p>
+<div class="grid grid-cols-2 gap-4 pt-4">
+<div class="glass-card p-4 rounded-xl">
+<h4 class="text-primary font-display font-bold text-2xl">40%</h4>
+<p class="text-sm font-label uppercase">Processing Boost</p>
+</div>
+<div class="glass-card p-4 rounded-xl">
+<h4 class="text-tertiary font-display font-bold text-2xl">50+</h4>
+<p class="text-sm font-label uppercase">Enterprise Integrations</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tech Stack Section (Updated from IMAGE_10) -->
+<section class="py-24 px-6 bg-surface-container-lowest/50" id="stack">
+<div class="max-w-6xl mx-auto text-center mb-16">
+<h2 class="text-4xl font-display font-bold mb-4">My Tech Stack</h2>
+<p class="text-on-surface-variant">The tools and technologies I use to build robust enterprise solutions.</p>
+</div>
+<div class="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+<!-- Stack Item (Mock Icons based on Request) -->
+<div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center gap-4 group hover:border-primary/50 transition-all cursor-default">
+<div class="w-12 h-12 bg-surface-container rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">php</span>
+</div>
+<span class="font-label text-sm uppercase tracking-wider font-bold">PHP 8.x</span>
+</div>
+<div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center gap-4 group hover:border-primary/50 transition-all cursor-default">
+<div class="w-12 h-12 bg-surface-container rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[#339933]">nest_eco_shell</span>
+</div>
+<span class="font-label text-sm uppercase tracking-wider font-bold">Node.js</span>
+</div>
+<div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center gap-4 group hover:border-primary/50 transition-all cursor-default">
+<div class="w-12 h-12 bg-surface-container rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[#61DAFB]">rebase_edit</span>
+</div>
+<span class="font-label text-sm uppercase tracking-wider font-bold">React</span>
+</div>
+<div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center gap-4 group hover:border-primary/50 transition-all cursor-default">
+<div class="w-12 h-12 bg-surface-container rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[#E0234E]">settings_heart</span>
+</div>
+<span class="font-label text-sm uppercase tracking-wider font-bold">NestJS</span>
+</div>
+<div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center gap-4 group hover:border-primary/50 transition-all cursor-default">
+<div class="w-12 h-12 bg-surface-container rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[#FF9900]">cloud_queue</span>
+</div>
+<span class="font-label text-sm uppercase tracking-wider font-bold">AWS</span>
+</div>
+<div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center gap-4 group hover:border-primary/50 transition-all cursor-default">
+<div class="w-12 h-12 bg-surface-container rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[#336791]">database</span>
+</div>
+<span class="font-label text-sm uppercase tracking-wider font-bold">PostgreSQL</span>
+</div>
+<div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center gap-4 group hover:border-primary/50 transition-all cursor-default">
+<div class="w-12 h-12 bg-surface-container rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[#00ADD8]">terminal</span>
+</div>
+<span class="font-label text-sm uppercase tracking-wider font-bold">Go</span>
+</div>
+<div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center gap-4 group hover:border-primary/50 transition-all cursor-default">
+<div class="w-12 h-12 bg-surface-container rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[#38B2AC]">palette</span>
+</div>
+<span class="font-label text-sm uppercase tracking-wider font-bold">Tailwind</span>
+</div>
+<div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center gap-4 group hover:border-primary/50 transition-all cursor-default">
+<div class="w-12 h-12 bg-surface-container rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">data_object</span>
+</div>
+<span class="font-label text-sm uppercase tracking-wider font-bold">TypeScript</span>
+</div>
+<div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center gap-4 group hover:border-primary/50 transition-all cursor-default">
+<div class="w-12 h-12 bg-surface-container rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-tertiary">rocket_launch</span>
+</div>
+<span class="font-label text-sm uppercase tracking-wider font-bold">Redis</span>
+</div>
+</div>
+</section>
+<!-- Professional Journey -->
+<section class="py-24 px-6 max-w-6xl mx-auto" id="experience">
+<h2 class="text-4xl font-display font-bold mb-16 flex items-center gap-6">
+                Professional Journey
+                <span class="flex-1 h-px bg-outline-variant"></span>
+</h2>
+<div class="space-y-12 relative before:absolute before:left-8 before:top-4 before:bottom-4 before:w-[2px] before:bg-outline-variant/30">
+<!-- Journey Item 1 -->
+<div class="relative pl-24 group">
+<div class="absolute left-8 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background group-hover:scale-150 transition-transform z-10"></div>
+<div class="glass-card p-8 rounded-3xl group-hover:border-primary/30 transition-all">
+<span class="text-primary font-label text-xs uppercase tracking-widest font-bold">2019 — Present</span>
+<h3 class="text-2xl font-display font-bold mt-2">I-SINC (ERP Solutions)</h3>
+<p class="text-tertiary font-medium mb-4">Senior Full Stack Developer</p>
+<ul class="space-y-4 text-on-surface-variant">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">verified</span>
+                                Optimized fiscal calculation engines reducing processing time by 40%.
+                            </li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">verified</span>
+                                Integrated real-time NFe and SPED reporting for enterprise clients.
+                            </li>
+</ul>
+</div>
+</div>
+<!-- Journey Item 2 -->
+<div class="relative pl-24 group">
+<div class="absolute left-8 -translate-x-1/2 w-4 h-4 rounded-full bg-tertiary border-4 border-background group-hover:scale-150 transition-transform z-10"></div>
+<div class="glass-card p-8 rounded-3xl group-hover:border-tertiary/30 transition-all">
+<span class="text-tertiary font-label text-xs uppercase tracking-widest font-bold">2018 — 2019</span>
+<h3 class="text-2xl font-display font-bold mt-2">Freelance Ecosystem</h3>
+<p class="text-primary font-medium mb-4">Software Consultant</p>
+<p class="text-on-surface-variant">
+                            Delivered custom inventory management tools and responsive web architectures for retail clients across São Paulo. Focus on automated fiscal compliance.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Projects -->
+<section class="py-24 px-6 max-w-6xl mx-auto" id="projects">
+<h2 class="text-4xl font-display font-bold mb-16 text-center">Featured Work</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="glass-card rounded-[2.5rem] p-10 group hover:-translate-y-2 transition-all">
+<div class="flex justify-between items-start mb-8">
+<div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">settings_input_component</span>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-[10px] font-label font-bold uppercase">GO</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-[10px] font-label font-bold uppercase">REDIS</span>
+</div>
+</div>
+<h4 class="text-3xl font-display font-bold mb-4">Fiscal Engine Core</h4>
+<p class="text-on-surface-variant mb-8 leading-relaxed">High-throughput microservice for real-time tax orchestration and validation across multiple Brazilian regions.</p>
+<a class="inline-flex items-center gap-2 text-primary font-label font-bold uppercase text-xs tracking-widest group-hover:gap-4 transition-all" href="#">
+                        View Architecture <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+<div class="glass-card rounded-[2.5rem] p-10 group hover:-translate-y-2 transition-all">
+<div class="flex justify-between items-start mb-8">
+<div class="w-14 h-14 rounded-2xl bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-3xl">grid_view</span>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-[10px] font-label font-bold uppercase">REACT</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-[10px] font-label font-bold uppercase">NESTJS</span>
+</div>
+</div>
+<h4 class="text-3xl font-display font-bold mb-4">Automation Matrix</h4>
+<p class="text-on-surface-variant mb-8 leading-relaxed">A visual workflow builder for ERP task automation, integrating legacy systems with modern cloud APIs.</p>
+<a class="inline-flex items-center gap-2 text-tertiary font-label font-bold uppercase text-xs tracking-widest group-hover:gap-4 transition-all" href="#">
+                        System Blueprint <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Contact Section (Updated from IMAGE_9) -->
+<section class="py-24 px-6 max-w-4xl mx-auto" id="contact">
+<div class="glass-card rounded-[3rem] p-12 text-center relative overflow-hidden">
+<div class="absolute -top-20 -right-20 w-80 h-80 bg-primary/20 rounded-full blur-[100px] -z-10"></div>
+<div class="absolute -bottom-20 -left-20 w-80 h-80 bg-tertiary/20 rounded-full blur-[100px] -z-10"></div>
+<h2 class="text-5xl font-display font-bold mb-4">Contact Me</h2>
+<p class="text-on-surface-variant mb-12 text-lg">Let's discuss how we can work together on your next project.</p>
+<div class="space-y-6 max-w-md mx-auto mb-12">
+<div class="flex flex-col items-center gap-2">
+<span class="text-primary material-symbols-outlined text-3xl">mail</span>
+<a class="text-xl font-display hover:text-primary transition-colors" href="mailto:murilo_agudos@hotmail.com">murilo_agudos@hotmail.com</a>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="text-tertiary material-symbols-outlined text-3xl">call</span>
+<p class="text-xl font-display">(14) 98164-7336</p>
+</div>
+</div>
+<div class="flex justify-center gap-6">
+<a class="w-14 h-14 rounded-full glass-card flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-14 h-14 rounded-full glass-card flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">code</span>
+</a>
+</div>
+<div class="mt-12 flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-primary text-on-primary px-12 py-4 rounded-full font-label font-bold uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all">
+                        Send Message
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="py-12 px-8 border-t border-outline-variant/20 bg-surface-container-lowest">
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="font-display font-bold text-2xl text-primary">MGT.</div>
+<div class="text-sm font-body text-on-surface-variant">
+                © 2024 Murilo Gonzales Trigo • Built with Violet Ether
+            </div>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Resume</a>
+</div>
+</div>
+</footer>
+</body></html>
