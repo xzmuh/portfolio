@@ -7,7 +7,7 @@ export default function About() {
             <img
               alt="Murilo Gonzales Trigo"
               className="about-image"
-              src="../public/assets/img/me.jpeg"
+              src="/img/me.jpeg"
             />
           </div>
         </div>

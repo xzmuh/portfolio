@@ -1,11 +1,14 @@
-import { MouseEvent } from 'react';
+import type { MouseEvent } from 'react';
 
 export default function Navbar() {
   const handleScroll = (e: MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-      const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+      const targetRect = targetElement.getBoundingClientRect();
+      const targetTop = targetRect.top + window.scrollY;
+      const centeredPosition = targetTop - (window.innerHeight - targetRect.height) / 2;
+      const targetPosition = Math.max(centeredPosition, 0);
       const startPosition = window.scrollY;
       const distance = targetPosition - startPosition;
       const duration = 600; // not too slow, not too fast

@@ -11,12 +11,13 @@
   display: flex;
   align-items: center;
   width: 100%;
+  overflow: visible;
 }
 
 .projects-scroll-container {
   overflow-x: auto;
   scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x proximity;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   padding: 1rem 0;
@@ -35,28 +36,51 @@
 .projects-grid {
   display: flex;
   gap: 2rem;
-  padding: 0 5%;
+  padding: 0;
   width: max-content;
+  animation: projects-marquee 36s linear infinite;
+  will-change: transform;
+}
+
+.projects-scroll-container:hover .projects-grid,
+.projects-scroll-container:focus-within .projects-grid {
+  animation-play-state: paused;
+}
+
+@keyframes projects-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .project-card {
   width: 300px;
   min-width: 300px;
+  min-height: 360px;
   border-radius: 2.5rem;
   padding: 2.5rem;
-  transition: transform 0.2s;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
   scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 768px) {
   .project-card {
     width: 400px;
     min-width: 400px;
+    min-height: 380px;
   }
 }
 
 .project-card:hover {
   transform: translateY(-0.5rem);
+  border-color: rgba(124, 60, 255, 0.42);
+  box-shadow: 0 22px 58px rgba(124, 60, 255, 0.16);
 }
 
 .carousel-btn {
@@ -77,16 +101,17 @@
 }
 
 .carousel-btn:hover {
-  background-color: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-tertiary));
   color: var(--color-on-primary);
+  box-shadow: 0 0 24px var(--shadow-primary);
 }
 
 .btn-left {
-  left: -1.5rem;
+  left: -0.5rem;
 }
 
 .btn-right {
-  right: -1.5rem;
+  right: -0.5rem;
 }
 
 .project-header {
@@ -105,8 +130,8 @@
   justify-content: center;
 }
 
-.bg-primary-10 { background-color: rgba(208, 188, 255, 0.1); }
-.bg-tertiary-10 { background-color: rgba(213, 188, 243, 0.1); }
+.bg-primary-10 { background-color: rgba(124, 60, 255, 0.16); }
+.bg-tertiary-10 { background-color: rgba(168, 85, 255, 0.14); }
 
 .project-icon { font-size: 1.875rem; }
 
@@ -130,11 +155,20 @@
   font-family: var(--font-display);
   font-weight: 700;
   margin-bottom: 1rem;
+  overflow-wrap: anywhere;
 }
 
 .project-desc {
   line-height: 1.625;
   margin-bottom: 2rem;
+  flex: 1;
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: auto;
 }
 
 .project-link {

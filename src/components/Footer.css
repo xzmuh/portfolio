@@ -1,6 +1,7 @@
 .footer {
   padding: 3rem 2rem;
-  border-top: 1px solid rgba(73, 68, 84, 0.2);
+  border-top: 1px solid rgba(124, 60, 255, 0.18);
+  background: linear-gradient(180deg, transparent, rgba(124, 60, 255, 0.06));
 }
 
 .footer-container {

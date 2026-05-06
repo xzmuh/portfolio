@@ -4,40 +4,44 @@ export default function Contact() {
   return (
     <section className="contact-section" id="contact">
       <div className="contact-card glass-card">
-        <div className="contact-bg-1"></div>
-        <div className="contact-bg-2"></div>
+        <div className="contact-copy">
+          <span className="contact-kicker text-primary">Contato</span>
+          <h2 className="contact-title text-on-surface">Vamos conversar?</h2>
+          <p className="contact-desc text-on-surface-variant">
+            Se voce tem um projeto, uma oportunidade ou uma ideia que precisa sair do papel, me chame por aqui.
+          </p>
+        </div>
 
-        <h2 className="contact-title text-on-surface">Entre em Contato</h2>
-        <p className="contact-desc text-on-surface-variant">
-          Vamos conversar sobre como podemos trabalhar juntos no seu projeto.
-        </p>
-
-        <div className="contact-info">
-          <div className="contact-item">
-            <span className="material-symbols-outlined text-primary contact-icon">mail</span>
-            <a className="contact-link text-on-surface" href="mailto:murilo_agudos@hotmail.com">
-              murilo_agudos@hotmail.com
+        <div className="contact-panel">
+          <div className="contact-info">
+            <a className="contact-item" href="mailto:murilo_agudos@hotmail.com">
+              <span className="material-symbols-outlined contact-icon">mail</span>
+              <span>
+                <small>Email</small>
+                <strong>murilo_agudos@hotmail.com</strong>
+              </span>
+            </a>
+            <a className="contact-item" href="tel:+5514981647336">
+              <span className="material-symbols-outlined contact-icon">call</span>
+              <span>
+                <small>Telefone</small>
+                <strong>(14) 98164-7336</strong>
+              </span>
             </a>
           </div>
-          <div className="contact-item">
-            <span className="material-symbols-outlined text-tertiary contact-icon">call</span>
-            <p className="contact-link text-on-surface">(14) 98164-7336</p>
+
+          <div className="contact-actions">
+            <a className="btn-send bg-primary text-on-primary" href="mailto:murilo_agudos@hotmail.com">
+              Enviar email
+              <span className="material-symbols-outlined link-icon">arrow_forward</span>
+            </a>
+            <a className="contact-muted-link" href="https://github.com/xzmuh" target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+            <a className="contact-muted-link" href="https://www.linkedin.com/in/murilo-trigo-6205b3190/" target="_blank" rel="noreferrer">
+              LinkedIn
+            </a>
           </div>
-        </div>
-
-        <div className="contact-socials">
-          <a className="social-btn glass-card" href="#">
-            <span className="material-symbols-outlined">share</span>
-          </a>
-          <a className="social-btn glass-card" href="#">
-            <span className="material-symbols-outlined">code</span>
-          </a>
-        </div>
-
-        <div className="contact-actions">
-          <button className="btn-send bg-primary text-on-primary">
-            Enviar Mensagem
-          </button>
         </div>
       </div>
     </section>

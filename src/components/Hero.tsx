@@ -1,21 +1,23 @@
+import Typewriter from './Typewriter';
+
 export default function Hero() {
   return (
     <section className="hero" id="hero">
-      <div className="hero-bg-1"></div>
-      <div className="hero-bg-2"></div>
+      <div className="hero-bg-1 animate-bg"></div>
+      <div className="hero-bg-2 animate-bg"></div>
       <div className="hero-content">
-        <div className="hero-badge glass-card">
+        <div className="hero-badge glass-card animate-fade-in" style={{ animationDelay: '0.2s' }}>
           Murilo G. Trigo
         </div>
-        <h1 className="hero-title">
-          Desenvolvedor<br />
-          <span className="text-primary text-glow">Full Stack</span>
-        </h1>
-
-        <p className="hero-desc">
-          Desenvolvo sistemas web e sites, bem estruturados e com design moderno, focado em resolver problemas reais de negócio.
+        <div className="hero-title animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <Typewriter text="Desenvolvedor" speed={100} className="block" />
+          <br />
+          <Typewriter text="Full Stack" speed={100} className="block text-primary text-glow" />
+        </div>
+        <p className="hero-desc animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          Transformo ideias em sites e sistemas que ajudam empresas a parecerem mais profissionais, venderem melhor e simplificarem o dia a dia.
         </p>
-        <div className="hero-stats">
+        <div className="hero-stats animate-fade-in" style={{ animationDelay: '0.8s' }}>
           <div className="stat-card glass-card">
             <span className="material-symbols-outlined text-primary stat-icon">terminal</span>
             <div className="stat-text">

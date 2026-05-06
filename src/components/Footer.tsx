@@ -9,9 +9,8 @@ export default function Footer() {
           © 2026 Murilo Gonzales Trigo
         </div>
         <div className="footer-links">
-          <a className="footer-link text-on-surface-variant" href="#">LinkedIn</a>
-          <a className="footer-link text-on-surface-variant" href="#">GitHub</a>
-          <a className="footer-link text-on-surface-variant" href="#">Currículo</a>
+          <a className="footer-link text-on-surface-variant" href="https://www.linkedin.com/in/murilo-trigo-6205b3190/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a className="footer-link text-on-surface-variant" href="https://github.com/xzmuh" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
     </footer>
