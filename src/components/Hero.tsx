@@ -58,8 +58,10 @@ export default function Hero() {
           Full Stack Developer
         </p>
         <h1 className="hero-title animate-fade-in" style={{ animationDelay: '0.34s' }}>
-          DA IDEIA AO
-          PRODUTO DIGITAL<span>.</span>
+          <span className="hero-title-line">DA IDEIA AO</span>
+          <span className="hero-title-line">
+            PRODUTO DIGITAL<span className="hero-title-dot">.</span>
+          </span>
         </h1>
         <p className="hero-desc animate-fade-in" style={{ animationDelay: '0.46s' }}>
           Desenvolvimento de sites e sistemas eficientes, bem estruturados e preparados para crescer junto com o negócio.

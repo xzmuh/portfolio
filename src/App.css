@@ -175,7 +175,11 @@
   color: #ffffff;
 }
 
-.hero-title span {
+.hero-title-line {
+  display: block;
+}
+
+.hero-title-dot {
   color: #5ed29c;
 }
 
@@ -243,7 +247,10 @@
 @media (max-width: 640px) {
   .hero {
     justify-content: center;
-    padding: 7rem 1.25rem 4.5rem;
+    align-items: stretch;
+    width: 100%;
+    min-height: 100dvh;
+    padding: 7.75rem 1rem 4rem;
   }
 
   .hero-video {
@@ -265,7 +272,9 @@
   }
 
   .hero-content {
-    margin-top: 2.75rem;
+    width: 100%;
+    max-width: calc(100vw - 2rem);
+    margin: 0;
   }
 
   .hero-liquid-card {
@@ -279,7 +288,17 @@
   }
 
   .hero-title {
-    letter-spacing: -0.04em;
+    max-width: 100%;
+    font-size: clamp(2.15rem, 10vw, 2.85rem);
+    line-height: 0.95;
+    letter-spacing: -0.045em;
+    overflow-wrap: normal;
+  }
+
+  .hero-desc {
+    max-width: 20rem;
+    font-size: 13px;
+    line-height: 1.65;
   }
 }
 
