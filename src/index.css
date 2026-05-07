@@ -1,25 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
 
 :root {
-  --color-surface: #111016;
-  --color-primary: #7c3cff;
-  --color-primary-strong: #651fff;
-  --color-tertiary: #a855ff;
-  --color-background: #08070d;
+  --color-surface: #101512;
+  --color-primary: #5ed29c;
+  --color-primary-strong: #31a876;
+  --color-tertiary: #7fd9d0;
+  --color-background: #070b0a;
   --color-on-surface: #fbfaff;
   --color-on-surface-variant: #d9d2e8;
   --color-on-primary: #ffffff;
-  --color-surface-container: #17131f;
-  --color-surface-container-high: #221a30;
-  --color-surface-container-lowest: #08070d;
-  --color-outline-variant: #4a3a66;
-  --shadow-primary: rgba(124, 60, 255, 0.55);
-  --shadow-tertiary: rgba(168, 85, 255, 0.45);
+  --color-surface-container: #111a15;
+  --color-surface-container-high: #17251e;
+  --color-surface-container-lowest: #070b0a;
+  --color-outline-variant: #294b3d;
+  --shadow-primary: rgba(94, 210, 156, 0.35);
+  --shadow-tertiary: rgba(127, 217, 208, 0.24);
 
-  --font-display: 'Space Grotesk', sans-serif;
+  --font-display: 'Inter', 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
-  --font-label: 'Space Grotesk', sans-serif;
+  --font-label: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-serif: 'Instrument Serif', serif;
 }
 
 * {
@@ -83,8 +84,8 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   background:
-    linear-gradient(135deg, rgba(124, 60, 255, 0.1), transparent 32%),
-    linear-gradient(315deg, rgba(168, 85, 255, 0.16), transparent 38%),
+    linear-gradient(135deg, rgba(94, 210, 156, 0.08), transparent 32%),
+    linear-gradient(315deg, rgba(127, 217, 208, 0.08), transparent 38%),
     var(--color-background);
   color: var(--color-on-surface);
   font-family: var(--font-body);
@@ -99,9 +100,9 @@ body::before {
   z-index: -2;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 80% 42% at 18% 18%, rgba(124, 60, 255, 0.18), transparent 62%),
-    radial-gradient(ellipse 68% 36% at 92% 12%, rgba(168, 85, 255, 0.14), transparent 58%),
-    radial-gradient(ellipse 84% 46% at 82% 86%, rgba(101, 31, 255, 0.22), transparent 60%),
+    radial-gradient(ellipse 80% 42% at 18% 18%, rgba(94, 210, 156, 0.12), transparent 62%),
+    radial-gradient(ellipse 68% 36% at 92% 12%, rgba(127, 217, 208, 0.08), transparent 58%),
+    radial-gradient(ellipse 84% 46% at 82% 86%, rgba(49, 168, 118, 0.14), transparent 60%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent 22%, rgba(255, 255, 255, 0.018));
 }
 
@@ -115,7 +116,7 @@ body::after {
   background:
     linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    repeating-linear-gradient(115deg, rgba(124, 60, 255, 0.08) 0 1px, transparent 1px 44px);
+    repeating-linear-gradient(115deg, rgba(94, 210, 156, 0.05) 0 1px, transparent 1px 44px);
   background-size: 72px 72px, 72px 72px, 100% 100%;
   mask-image: linear-gradient(to bottom, transparent, black 12%, black 86%, transparent);
 }
@@ -139,7 +140,7 @@ a {
 }
 
 .text-glow {
-  text-shadow: 0 0 18px var(--shadow-primary), 0 0 44px rgba(124, 60, 255, 0.4);
+  text-shadow: 0 0 18px var(--shadow-primary), 0 0 44px rgba(94, 210, 156, 0.22);
 }
 
 .max-w-6xl {

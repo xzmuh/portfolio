@@ -1,38 +1,70 @@
-import Typewriter from './Typewriter';
+import { useEffect, useRef } from 'react';
+import Hls from 'hls.js';
+import { ArrowRight } from 'lucide-react';
+
+const HERO_STREAM_URL = 'https://stream.mux.com/tLkHO1qZoaaQOUeVWo8hEBeGQfySP02EPS02BmnNFyXys.m3u8';
 
 export default function Hero() {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = HERO_STREAM_URL;
+      return;
+    }
+
+    if (!Hls.isSupported()) return;
+
+    const hls = new Hls({ enableWorker: false });
+    hls.loadSource(HERO_STREAM_URL);
+    hls.attachMedia(video);
+
+    return () => hls.destroy();
+  }, []);
+
   return (
     <section className="hero" id="hero">
-      <div className="hero-bg-1 animate-bg"></div>
-      <div className="hero-bg-2 animate-bg"></div>
+      <video
+        ref={videoRef}
+        className="hero-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+        aria-hidden="true"
+      />
+      <div className="hero-video-wash" aria-hidden="true" />
+      <div className="hero-side-gradient" aria-hidden="true" />
+      <div className="hero-bottom-gradient" aria-hidden="true" />
+      <div className="hero-grid-lines" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+      </div>
+      <svg className="hero-glow" viewBox="0 0 920 220" aria-hidden="true">
+        <defs>
+          <filter id="heroGlowBlur" x="-10%" y="-60%" width="120%" height="220%">
+            <feGaussianBlur stdDeviation="25" />
+          </filter>
+        </defs>
+        <ellipse cx="460" cy="92" rx="360" ry="42" fill="rgba(94, 210, 156, 0.35)" filter="url(#heroGlowBlur)" />
+        <ellipse cx="460" cy="102" rx="270" ry="24" fill="rgba(12, 75, 59, 0.62)" filter="url(#heroGlowBlur)" />
+      </svg>
+
       <div className="hero-content">
-        <div className="hero-badge glass-card animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          Murilo G. Trigo
-        </div>
-        <div className="hero-title animate-fade-in" style={{ animationDelay: '0.4s' }}>
-          <Typewriter text="Desenvolvedor" speed={100} className="block" />
-          <br />
-          <Typewriter text="Full Stack" speed={100} className="block text-primary text-glow" />
-        </div>
-        <p className="hero-desc animate-fade-in" style={{ animationDelay: '0.6s' }}>
-          Transformo ideias em sites e sistemas que ajudam empresas a parecerem mais profissionais, venderem melhor e simplificarem o dia a dia.
+        <p className="hero-eyebrow animate-fade-in" style={{ animationDelay: '0.22s' }}>
+          Full Stack Developer
         </p>
-        <div className="hero-stats animate-fade-in" style={{ animationDelay: '0.8s' }}>
-          <div className="stat-card glass-card">
-            <span className="material-symbols-outlined text-primary stat-icon">terminal</span>
-            <div className="stat-text">
-              <p className="stat-label">Experiência</p>
-              <p className="stat-value">5+ Anos</p>
-            </div>
-          </div>
-          <div className="stat-card glass-card">
-            <span className="material-symbols-outlined text-tertiary stat-icon">account_balance</span>
-            <div className="stat-text">
-              <p className="stat-label">Foco</p>
-              <p className="stat-value">Sistemas Web</p>
-            </div>
-          </div>
-        </div>
+        <h1 className="hero-title animate-fade-in" style={{ animationDelay: '0.34s' }}>
+          DA IDEIA AO
+          PRODUTO DIGITAL<span>.</span>
+        </h1>
+        <p className="hero-desc animate-fade-in" style={{ animationDelay: '0.46s' }}>
+          Desenvolvimento de sites e sistemas eficientes, bem estruturados e preparados para crescer junto com o negócio.
+        </p>
       </div>
     </section>
   );
