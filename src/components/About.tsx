@@ -1,4 +1,6 @@
 export default function About() {
+  const profileImage = `${import.meta.env.BASE_URL}img/me.jpeg`;
+
   return (
     <section className="section" id="about">
       <div className="about-grid">
@@ -7,7 +9,7 @@ export default function About() {
             <img
               alt="Murilo Gonzales Trigo"
               className="about-image"
-              src="/img/me.jpeg"
+              src={profileImage}
             />
           </div>
         </div>

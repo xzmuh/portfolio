@@ -81,7 +81,7 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="stack-title text-on-surface">Projetos em Destaque</h2>
         <p className="text-on-surface-variant">
-          Repositorios pinned do meu GitHub, reunindo estudos, automacoes, interfaces e projetos web.
+          Estudos, testes e projetos em desenvolvimento usados para prática e evolução técnica.
         </p>
         <br />
       </div>
