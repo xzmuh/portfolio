@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
 import Hls from 'hls.js';
-import { ArrowRight } from 'lucide-react';
 
 const HERO_STREAM_URL = 'https://stream.mux.com/tLkHO1qZoaaQOUeVWo8hEBeGQfySP02EPS02BmnNFyXys.m3u8';
 

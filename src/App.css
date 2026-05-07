@@ -242,8 +242,30 @@
 
 @media (max-width: 640px) {
   .hero {
-    justify-content: flex-end;
-    padding-bottom: 4rem;
+    justify-content: center;
+    padding: 7rem 1.25rem 4.5rem;
+  }
+
+  .hero-video {
+    object-position: 58% center;
+  }
+
+  .hero-video-wash {
+    background: rgba(7, 11, 10, 0.44);
+  }
+
+  .hero-side-gradient {
+    background:
+      linear-gradient(180deg, rgba(7, 11, 10, 0.82) 0%, rgba(7, 11, 10, 0.24) 32%, rgba(7, 11, 10, 0.72) 100%),
+      linear-gradient(90deg, #070b0a 0%, rgba(7, 11, 10, 0.64) 48%, transparent 100%);
+  }
+
+  .hero-bottom-gradient {
+    height: 58%;
+  }
+
+  .hero-content {
+    margin-top: 2.75rem;
   }
 
   .hero-liquid-card {
