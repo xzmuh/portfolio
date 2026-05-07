@@ -11,7 +11,8 @@
   display: flex;
   align-items: center;
   width: 100%;
-  overflow: visible;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .projects-scroll-container {
@@ -22,6 +23,7 @@
   scrollbar-width: none; /* Firefox */
   padding: 1rem 0;
   width: 100%;
+  max-width: 100%;
   
   /* The fade effect on the edges */
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
@@ -58,8 +60,8 @@
 }
 
 .project-card {
-  width: 300px;
-  min-width: 300px;
+  width: min(300px, calc(100vw - 3rem));
+  min-width: min(300px, calc(100vw - 3rem));
   min-height: 360px;
   border-radius: 2.5rem;
   padding: 2.5rem;
